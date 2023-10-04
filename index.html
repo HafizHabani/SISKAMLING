@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
     <title>SISKAMLING | Sistem Keamanan Lingkungan | Website</title>
@@ -37,14 +38,93 @@
             </div>
             <div class="user-button">
                 <div class="petugas-button">
-                    <button class="petugas">
+                    <button class="petugas" onclick="document.getElementById('login-petugas').style.display='block'">
                         MASUK SEBAGAI PETUGAS
                     </button>
                 </div>
+                <div class="loginpetugas" id="login-petugas">
+                    <div class="login-petugas">
+                        <div class="header-login-petugas">
+                            <div class="text-top-login-petugas">
+                                Masukan Akun Anda!
+                            </div>
+                            <div class="button-cancel"
+                                onclick="document.getElementById('login-petugas').style.display='none'">
+                                <img src="asset/Vector.png" alt="png">
+                            </div>
+                        </div>
+                        <div class="from-login-petugas">
+                            <div class="text-from-login-email-petugas">
+                                <label class="label-login" for="email"><b>Email *</b></label>
+                                <input class="input-login" type="text" placeholder="Masukan Email Anda" name="email"
+                                    required>
+                            </div>
+                            <div class="text-from-login-password-petugas">
+                                <label class="label-login" for="password"><b>Password *</b></label>
+                                <input class="input-login" type="text" placeholder="Masukan Password Anda"
+                                    name="password" required>
+                            </div>
+                            <div class="button-from-login-petugas">
+                                <i class="fa fa-sign-in" style="font-size:28px; color:white; padding-right: 5%;"></i>
+                                <div class="text-button-login-petugas">
+                                    Login / Masuk
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="note-login-petugas">
+                            <b>Password belum diganti?</b>
+                            <br>
+                            <b>gunakan password</b>
+                            <a href="https://youtu.be/dQw4w9WgXcQ?si=SwH3gG4lOymdImr7">
+                                siskamling2023
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div class="warga-button">
-                    <button class="warga">
+                    <button class="warga" onclick="document.getElementById('login-warga').style.display='block'">
                         MASUK SEBAGAI WARGA
                     </button>
+                </div>
+                <div class="loginpetugas" id="login-warga">
+                    <div class="login-petugas">
+                        <div class="header-login-petugas">
+                            <div class="text-top-login-petugas">
+                                Masukan Akun Anda!
+                            </div>
+                            <div class="button-cancel"
+                                onclick="document.getElementById('login-warga').style.display='none'">
+                                <img src="asset/Vector.png" alt="png">
+                            </div>
+                        </div>
+                        <div class="from-login-petugas">
+                            <div class="text-from-login-email-petugas">
+                                <label class="label-login" for="email"><b>NIK *</b></label>
+                                <input class="input-login" type="text" placeholder="Masukan NIK Anda" name="nik"
+                                    required>
+                            </div>
+                            <div class="text-from-login-password-petugas">
+                                <label class="label-login" for="password"><b>Password *</b></label>
+                                <input class="input-login" type="text" placeholder="Masukan Password Anda"
+                                    name="password" required>
+                            </div>
+                            <a class="button-from-login-petugas" href="https://youtu.be/dQw4w9WgXcQ?si=SwH3gG4lOymdImr7">
+                                <i class="fa fa-sign-in" style="font-size:28px; color:white; padding-right: 5%;"></i>
+                                <div class="text-button-login-petugas">
+                                    Login / Masuk
+                                </div>
+                            </a>
+                        </div>
+                        <div class="note-login-petugas">
+                            <b>Password belum diganti?</b>
+                            <br>
+                            <b>gunakan password</b>
+                            <a href="https://youtu.be/dQw4w9WgXcQ?si=SwH3gG4lOymdImr7">
+                                siskamling2023
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
