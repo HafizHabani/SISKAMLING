@@ -22,7 +22,7 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 10;
 }
 
 .btn-admin {
@@ -36,6 +36,97 @@ body {
 .btn-admin:hover {
   background-color: white;
   color: #000000;
+}
+
+.nav-button {
+  display: none;
+  margin-right: 24px;
+  margin-bottom: 8px;
+  padding: 0;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-logo {
+  flex: 1;
+}
+
+.menu-container {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  margin: 12px 0px 0px 32px;
+  font-size: 18px;
+}
+
+.dropdown-nav-menu {
+  width: 140px;
+  position: absolute;
+  top: 40px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-nav-item {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.hidden-nav {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .nav-container {
+    padding: 0 32px;
+  }
+
+  .nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-container {
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    flex-direction: column;
+    padding: 48px;
+    width: 240px;
+    height: calc(100vh);
+    transition: 0.5s ease;
+  }
+
+  /* show class will make .menu-container slides in */
+  .show {
+    left: 0;
+  }
+
+  .menu-item {
+    margin: 16px 0;
+    font-size: 16px;
+  }
+}
+
+.menu-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.menu-link:hover {
+  color: #ffffff;
 }
 /* Navbar CSS End */
 
@@ -55,7 +146,7 @@ body {
   font-weight: bold;
   font-size: 42px;
   color: #000000;
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
 }
 
 .section-login h3 {
@@ -63,7 +154,7 @@ body {
   font-size: 26px;
   color: #000000;
   margin-bottom: 32px;
-  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
 }
 
 .section-login a {
@@ -85,6 +176,264 @@ body {
   opacity: 90%;
 }
 /* Login CSS End */
+
+/* Welcome CSS Start */
+#welcome {
+  width: 100%;
+  height: 440px;
+  background-image: url(../assets/pos-ronda.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.section-welcome {
+  padding-top: 170px;
+  text-align: center;
+  width: 100%;
+}
+
+.section-welcome h1 {
+  font-size: 38px;
+  font-weight: bold;
+  color: #000000;
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}
+
+.section-welcome h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}
+/* Welcome CSS End */
+
+/* Features CSS Start */
+.page-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-features hr,
+.section-jadwal hr,
+.section-absen hr,
+.section-laporan-petugas hr,
+.section-ubah-password hr {
+  border: 1.5px solid black;
+  width: 100%;
+  display: block;
+  margin-bottom: 48px;
+}
+
+.features-content {
+  flex-wrap: wrap;
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 32px;
+}
+
+.image-features {
+  margin: auto;
+  order: 1;
+}
+
+.description-features {
+  margin-top: 32px;
+  order: 2;
+}
+
+.image-features-right {
+  margin: auto;
+  order: 1;
+}
+
+.description-features-right {
+  margin-top: 32px;
+  order: 2;
+}
+/* Features CSS End */
+
+/* Jadwal CSS Start */
+#jadwal,
+#absen,
+#laporan-petugas,
+#ubah-password {
+  padding-top: 140px;
+}
+
+.cards-jadwal {
+  display: block;
+}
+
+.card-jadwal {
+  width: 100%;
+  padding: 18px 8px;
+  margin-bottom: 24px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #000000;
+}
+
+.card-jadwal h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.card-jadwal hr {
+  color: black;
+  width: 82%;
+  display: block;
+  margin: auto;
+  margin-bottom: 16px;
+}
+
+.card-jadwal ul li {
+  list-style: none;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.btn-jadwal {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-jadwal button {
+  font-size: 1rem;
+}
+/* Jadwal CSS End */
+
+/* Absen CSS Start */
+.card-form {
+  background-color: #dddddd;
+  padding: 80px 60px;
+  margin: auto;
+  width: 80%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-form-izin {
+  background-color: #dddddd;
+  padding: 120px 60px;
+  margin: auto;
+  width: 80%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.absen-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-masuk img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  top: 80px;
+  right: 60px;
+}
+
+.image-izin img,
+.image-password img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+
+.image-password img {
+  max-width: 80%;
+  height: auto;
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+
+.form-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.form-container h2 {
+  text-align: center;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-bottom: 5px;
+}
+
+.form-container input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(233, 233, 233);
+}
+
+.form-container button {
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-form {
+    padding: 40px 60px;
+  }
+
+  .card-form-izin {
+    padding: 40px 60px;
+  }
+
+  .absen-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-container {
+    margin-bottom: 20px;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .image-masuk img {
+    top: 0px;
+    right: 0px;
+  }
+
+  .image-izin img {
+    top: 0px;
+    right: 0px;
+  }
+}
+/* Absen CSS End */
 
 /* Responsive sm */
 @media (min-width: 640px) {}
@@ -138,6 +487,81 @@ body {
     width: 320px;
   }
   /* Login CSS End */
+
+  /* Welcome CSS Start */
+  .section-welcome {
+    padding-top: 160px;
+    width: 80%;
+    text-align: start;
+  }
+
+  .section-welcome h1 {
+    font-size: 66px;
+  }
+
+  .section-welcome h3 {
+    font-size: 36px;
+  }
+  /* Welcome CSS End */
+
+  /* Features CSS Start */
+  .page-title {
+    font-size: 52px;
+    font-weight: bold;
+  }
+
+  .features-content {
+    flex-wrap: nowrap;
+    text-align: justify;
+    gap: 140px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .description-features,
+  .description-features-right {
+    margin-top: 0px;
+  }
+
+  .image-features-right {
+    order: 2;
+  }
+
+  .description-features-right {
+    order: 1;
+  }
+  /* Features CSS End */
+
+  /* Jadwal CSS Start */
+  .cards-jadwal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card-jadwal {
+    width: 28%;
+    margin-bottom: 80px;
+  }
+
+  .card-jadwal h3 {
+    font-size: 32px;
+  }
+
+  .card-jadwal ul li {
+    font-size: 20px;
+  }
+
+  .btn-jadwal button {
+    font-size: 1.25rem;
+  }
+  /* Jadwal CSS End */
+
+  /* Laporan Petugas CSS Start */
+  .modal-laporan {
+    width: 500px;
+  }
+  /* Laporan Petugas CSS End */
 }
 
 /* Responsive lg */
