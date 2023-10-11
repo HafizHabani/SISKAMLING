@@ -220,7 +220,9 @@ body {
 .section-jadwal hr,
 .section-absen hr,
 .section-laporan-petugas hr,
-.section-ubah-password hr {
+.section-ubah-password hr,
+.section-laporan-warga hr,
+.section-status-laporan hr {
   border: 1.5px solid black;
   width: 100%;
   display: block;
@@ -260,8 +262,10 @@ body {
 #jadwal,
 #absen,
 #laporan-petugas,
-#ubah-password {
-  padding-top: 140px;
+#ubah-password,
+#laporan-warga,
+#status-laporan {
+  padding-top: 90px;
 }
 
 .cards-jadwal {
@@ -311,7 +315,8 @@ body {
 /* Jadwal CSS End */
 
 /* Absen CSS Start */
-.card-form {
+.card-form ,
+.card-form-status {
   background-color: #dddddd;
   padding: 80px 60px;
   margin: auto;
@@ -327,7 +332,17 @@ body {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-.absen-container {
+.card-form-laporan {
+  background-color: #dddddd;
+  padding: 40px 60px;
+  margin: auto;
+  width: 80%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.absen-container,
+.pengaturan-container,
+.laporan-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -350,7 +365,7 @@ body {
 }
 
 .image-izin img,
-.image-password img {
+.image-laporan img {
   max-width: 100%;
   height: auto;
   position: relative;
@@ -389,7 +404,15 @@ body {
   margin-bottom: 10px;
   border-radius: 5px;
   border: none;
-  background-color: rgb(233, 233, 233);
+  background-color: #F4F5F6;
+}
+
+.form-container textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #F4F5F6;
 }
 
 .form-container button {
@@ -406,11 +429,26 @@ body {
     padding: 40px 60px;
   }
 
+  .card-form-status {
+    background-color: transparent;
+    padding: 0px 0px;
+    margin: auto;
+    width: 100%;
+    box-shadow: none;
+    border: none !important;
+  }
+
   .card-form-izin {
     padding: 40px 60px;
   }
 
-  .absen-container {
+  .card-form-laporan {
+    padding: 40px 20px;
+  }
+
+  .absen-container,
+  .pengaturan-container,
+  .laporan-container {
     flex-direction: column;
     gap: 20px;
   }
@@ -434,6 +472,17 @@ body {
   }
 }
 /* Absen CSS End */
+
+/* Laporan Warga CSS Start */
+.btn-phone {
+  text-decoration: none;
+  padding: 0px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DC3545;
+}
+/* Laporan Warga CSS End */
 
 /* Responsive sm */
 @media (min-width: 640px) {}
@@ -533,6 +582,15 @@ body {
   /* Features CSS End */
 
   /* Jadwal CSS Start */
+    #jadwal,
+    #absen,
+    #laporan-petugas,
+    #ubah-password,
+    #laporan-warga,
+    #status-laporan {
+      padding-top: 140px;
+    }
+
   .cards-jadwal {
     display: flex;
     flex-wrap: wrap;

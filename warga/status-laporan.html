@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SISKAMLING - Status Laporan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/255fd51aa4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar-header bg-primary py-3">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <button class="nav-button"></button>
+        <h1 class="nav-logo fs-4 text-white">SISKAMLING</h1>
+        <ul class="menu-container bg-primary">
+          <li class="menu-item">
+            <a class="menu-link" href="beranda-warga.html">Beranda</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="jadwal-warga.html">Jadwal</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="laporan-warga.html">Laporan</a>
+          </li>
+          <li class="menu-item dropdown-menu-item" style="position: relative;">
+            <a class="menu-link" href="#">Raihan Ramadhan <i class="fa-solid fa-caret-down"></i> </i></a>
+            <div class="dropdown-nav-menu hidden-nav">
+              <a class="dropdown-nav-item" href="ubah-password.html"><i class="fa fa-gear"></i> Pengaturan</a>
+              <a class="dropdown-nav-item" href="../index.html"><i class="fa fa-sign-out"></i> Keluar</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Status Section Start -->
+  <section id="status-laporan" class="section-status-laporan pb-5">
+    <div class="container">
+      <h1 class="page-title">STATUS LAPORAN ANDA</h1>
+      <hr>
+      <div class="card-form-status border rounded">
+        <div class="table-responsive">
+          <table class="table table-dark table-bordered" style="min-width: 700px;">
+            <thead class="text-center">
+              <tr>
+                <th>No</th>
+                <th>Subjek Laporan</th>
+                <th>Foto/Video Lampiran</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <td>1</td>
+                <td>Kemalingan</td>
+                <td><img src="../assets/img/laporan/kemalingan.png" alt="Kemalingan" class="img-thumbnail" width="120"></td>
+                <td>
+                  <div class="btn btn-success">Laporan Diterima</div>
+                </td>
+                <td>
+                  <a href="" class="btn btn-danger">Hapus</a>
+                  <a href="" data-bs-toggle="modal" data-bs-target="#detail-laporan-kemalingan"
+                    class="btn btn-warning">Detail</a>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Kehilangan Motor</td>
+                <td><img src="../assets/img/laporan/beat-merah.jpg" alt="Kehilangan Motor" class="img-thumbnail" width="120">
+                </td>
+                <td>
+                  <div class="btn btn-warning">Laporan Sedang Ditinjau</div>
+                </td>
+                <td>
+                  <a href="" class="btn btn-danger">Hapus</a>
+                  <a href="" data-bs-toggle="modal" data-bs-target="#detail-laporan-kehilangan"
+                    class="btn btn-warning">Detail</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Status Section End -->
+
+  <!-- Detail Modal Start -->
+  <div class="modal fade" id="detail-laporan-kemalingan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-laporan">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4" id="staticBackdropLabel">Detail Laporan</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class=""><span class="fw-bold">Tanggal:</span> 2023-09-29 02:01:11</p>
+          <p class=""><span class="fw-bold">Nama:</span> Raihan Ramadhan</p>
+          <p class=""><span class="fw-bold">Subjek Laporan:</span> Kemalingan</p>
+          <p class=" fw-bold">Alamat:</p>
+          <p>Jl. Raya Cibening Bungursari RT23 RW08 Blok A No. 15, Desa Cibening, Kec. Bungursari, Kab. Purwakarta, Jawa
+            Barat, Indonesia, 41181</p>
+          <p class=" fw-bold">Pesan:</p>
+          <p class="">
+            Terjadi tindak pencurian di rumah saya, barang yang hilang diantanya Laptop, Televisi, Dompet dan barang
+            berharga didalam lemari.
+          </p>
+          <p class=" fw-bold">Status:</p>
+          <div class="btn btn-success">Laporan Diterima</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Detail Modal End -->
+  
+  <!-- Detail Modal Start -->
+  <div class="modal fade" id="detail-laporan-kehilangan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-laporan">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-4" id="staticBackdropLabel">Detail Laporan</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class=""><span class="fw-bold">Tanggal:</span> 2023-10-02 23:26:09</p>
+          <p class=""><span class="fw-bold">Nama:</span> Raihan Ramadhan</p>
+          <p class=""><span class="fw-bold">Subjek Laporan:</span> Kehilangan Motor</p>
+          <p class=" fw-bold">Alamat:</p>
+          <p>Jl. Raya Cibening Bungursari RT23 RW08 Blok A No. 21, Desa Cibening, Kec. Bungursari, Kab. Purwakarta, Jawa
+            Barat, Indonesia, 41181</p>
+          <p class=" fw-bold">Pesan:</p>
+          <p class="">
+            Motor saya hilang di depan rumah dengan ciri:
+            <br>
+            - Motor : Honda Beat <br>
+            - Warna : Merah <br>
+            - Plat : T 1234 ABC
+          </p>
+          <p class=" fw-bold">Status:</p>
+          <div class="btn btn-warning">Laporan Sedang Ditinjau</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Detail Modal End -->
+  
+  <!-- Footer Start -->
+  <footer class="bg-primary py-4">
+    <div class="text-white text-center">
+      <span>Copyright © 2023 SISKAMLING All Rights Reserved</span>
+    </div>
+  </footer>
+  <!-- Footer End -->
+  
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
