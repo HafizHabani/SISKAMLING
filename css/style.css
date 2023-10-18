@@ -17,6 +17,15 @@ body {
   background-position: center;
 }
 
+#btn-to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: none;
+  z-index: 99;
+  border: none;
+}
+
 /* Navbar CSS Start */
 .navbar-header {
   position: fixed;

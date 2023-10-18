@@ -55,3 +55,29 @@ window.onload = function () {
     document.getElementById("random-text").value = teks[indeksAcak];
 };
 // Absen JS End
+
+// Button To Top JS Start
+const btnTop = document.getElementById('btn-to-top'); // Mendapatkan Button
+
+window.addEventListener('scroll', function(){
+    scrollFunction();
+});
+
+function scrollFunction(){
+    if(
+        document.body.scrollTop > 50 || document.documentElement.scrollTop > 50
+    ) {
+        btnTop.style.display = 'block';
+    } else {
+        btnTop.style.display = 'none';
+    }
+};
+
+// Ketika Tombol Di Klik Maka Kembali Ke Atas
+btnTop.addEventListener('click', backtoTop);
+
+function backtoTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+// Button To Top JS End
